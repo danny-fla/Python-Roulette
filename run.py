@@ -78,6 +78,7 @@ def get_bet_choice():
     print("Type '3' for Even.")
     print("Type '4' for Odd.")
     print("Type '5' for Green.")
+    print("Type '6' for Straight")
 
     while True:
         bet_choice = input("Enter the number corresponding to your desired bet: ")
@@ -92,13 +93,21 @@ def get_bet_choice():
 
 
 
-def get_bet_amount(choice):
+def get_bet_amount(choice, balance):
     while True:
         bet_amount = input("How much do you wish to bet? €")
         if bet_amount.isdigit():
             bet_amount = int(bet_amount)
             if 1 <= bet_amount <= MAX_BET_AMOUNT:
-                return bet_amount
+                if bet_amount <= balance:
+                    return bet_amount
+                else:
+                    print("I'm sorry, you do not have enough in your account.")
+                    print(f"You're balance is {balance}")
+                    add_more_money = input("Would you like to add more money? (yes/no): ")
+                    if add_more_money.lower() == "yes":
+                        deposit_amount = add_money()
+                        balance += deposit_amount
             else:
                 print("Error: Invalid bet amount. Minimum bet is €1. Maximum bet is €5000.")
         else:
@@ -139,7 +148,7 @@ while True:
     while True:
         # Get bet choice and amount
         choice = get_bet_choice()
-        stake = get_bet_amount(choice)
+        stake = get_bet_amount(choice, balance)
 
         # Spin the wheel and determine the outcome
         winning_color, winning_number = spin_roulette_wheel()
@@ -147,8 +156,12 @@ while True:
 
         # Display the outcome and update the balance
         print(f"The ball has landed on {winning_color} {winning_number}")
-        print(f"You bet €{stake}, and you won €{winnings}!")
+        if winning_color == choice or winning_number == choice:
+            print(f"Congratulations! You bet €{stake}, and you won €{winnings}!")
+        else:
+            print(f"Hard luck")
         balance += winnings
+        balance -= stake
         print(f"Your updated balance is €{balance}")
 
         # Check if the user wants to play again
