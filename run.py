@@ -68,9 +68,10 @@ def get_bet_choice():
     bet_mapping = {
         1: 'Red',
         2: 'Black',
-        3: 'Even',
-        4: 'Odd',
-        5: 'Green'
+        3: 'Odd',
+        4: 'Even',
+        5: 'Green',
+        6: 'Straight'
     }
 
     print("Type '1' for Red.")
@@ -85,9 +86,21 @@ def get_bet_choice():
         if bet_choice.isdigit():
             bet_choice = int(bet_choice)
             if bet_choice in bet_mapping:
-                return bet_mapping[bet_choice]
+                if bet_mapping[bet_choice] == 'Straight':
+                    while True:
+                        straight_number = input('Enter the specific number (1-36) you want to bet on: ')
+                        if straight_number.isdigit():
+                            straight_number = int(straight_number)
+                            if 1 <= straight_number <= 36:
+                                return f"Straight {straight_number}"
+                            else: 
+                                print("Error: Invalid straight number. Please enter a number from 1 to 36.")
+                        else:
+                            print("Error: Invalid input. Please enter a number.")
+                else:
+                    return bet_mapping[bet_choice]
             else:
-                print("Error: Invalid bet choice. Please enter a number from 1 to 5.")
+                print("Error: Invalid bet choice. Please enter a number from 1 to 6.")
         else:
             print("Error: Invalid input. Please enter a number.")
 
@@ -136,6 +149,11 @@ def check_winnings(winning_color, winning_number, choice, stake):
     elif winning_number % 2 == 0 and choice == 'Even':
         print("Checking if even")
         winnings = int(stake) * 2
+    elif choice.startswith('Straight'):
+        straight_number = int(choice.split()[1])
+        if straight_number == winning_number:
+            print("Checking if straight")
+            winnings = int(stake) * 35
 
     return winnings
 
