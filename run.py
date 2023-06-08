@@ -1,4 +1,5 @@
 import random
+import time
 
 MIN_BET_SELECTION = 1
 MAX_BET_SELECTION = 10
@@ -129,7 +130,9 @@ def get_bet_amount(choice, balance):
 
 def spin_roulette_wheel():
     print("Roulette wheel spinning...")
+    time.sleep(2)
     print("No more bets.")
+    time.sleep(2)
     winning_number = random.choice(wheel_numbers)
     winning_color = number_colors[winning_number]
     return winning_color, winning_number
