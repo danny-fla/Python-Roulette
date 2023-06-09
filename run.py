@@ -50,7 +50,7 @@ number_colors = {
     26: 'Black',
 }
 
-       
+
 def add_money():
     while True:
         try:
@@ -59,11 +59,10 @@ def add_money():
                 break
             else:
                 print("Minimum deposit is €1.")
-       
         except ValueError:
             print("Please enter a valid number.")
-
     return amount
+
 
 def get_bet_choice():
     bet_mapping = {
@@ -94,7 +93,7 @@ def get_bet_choice():
                             straight_number = int(straight_number)
                             if 1 <= straight_number <= 36:
                                 return f"Straight {straight_number}"
-                            else: 
+                            else:
                                 print("Error: Invalid straight number. Please enter a number from 1 to 36.")
                         else:
                             print("Error: Invalid input. Please enter a number.")
@@ -104,7 +103,6 @@ def get_bet_choice():
                 print("Error: Invalid bet choice. Please enter a number from 1 to 6.")
         else:
             print("Error: Invalid input. Please enter a number.")
-
 
 
 def get_bet_amount(choice, balance):
@@ -130,9 +128,15 @@ def get_bet_amount(choice, balance):
 
 def spin_roulette_wheel():
     print("Roulette wheel spinning...")
-    time.sleep(2)
+    time.sleep(1)
+    for _ in range(3):
+        print("." * random.randint(3, 6))
+        time.sleep(1)
     print("No more bets.")
     time.sleep(2)
+    for _ in range(3):
+        print("." * random.randint(3, 6))
+        time.sleep(1)
     winning_number = random.choice(wheel_numbers)
     winning_color = number_colors[winning_number]
     return winning_color, winning_number
