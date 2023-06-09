@@ -6,10 +6,12 @@ MAX_BET_SELECTION = 10
 MIN_BET_AMOUNT = 1
 MAX_BET_AMOUNT = 5000
 
+# List of numbers on the roulette wheeel
 wheel_numbers = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30,
                  8, 23, 10, 5, 24, 16, 33, 1, 20, 14, 31, 9, 22, 18, 29,
                  7, 28, 12, 35, 3, 26]
 
+# Dictionary mapping numbers to their corresponding colors
 number_colors = {
     0: 'Green',
     32: 'Red',
@@ -52,6 +54,7 @@ number_colors = {
 
 
 def add_money():
+    # Function to prompt user to add money into their account
     while True:
         try:
             amount = int(input("How much would you like to deposit? €"))
@@ -65,6 +68,7 @@ def add_money():
 
 
 def get_bet_choice():
+    # Function to get the user's desired bet choice
     bet_mapping = {
         1: 'Red',
         2: 'Black',
@@ -106,6 +110,7 @@ def get_bet_choice():
 
 
 def get_bet_amount(choice, balance):
+    # Function to get the amount of money the user wants to bet
     while True:
         bet_amount = input("How much do you wish to bet? €")
         if bet_amount.isdigit():
@@ -127,6 +132,7 @@ def get_bet_amount(choice, balance):
 
 
 def spin_roulette_wheel():
+    # Function to generate the game's winnging number and colour
     print("Roulette wheel spinning...")
     time.sleep(1)
     for _ in range(3):
@@ -143,6 +149,7 @@ def spin_roulette_wheel():
 
 
 def check_winnings(winning_color, winning_number, choice, stake):
+    # Funciton to check if the user has won any money
     winnings = 0
     if winning_color == choice:
         print("Checking winning color")
@@ -199,4 +206,5 @@ while True:
     if continue_playing.lower() != "no":
         break
 
-print('Your closing balance is: ', balance)
+# User's funal balance
+print('Your closing balance is: €', balance)
