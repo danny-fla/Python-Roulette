@@ -40,11 +40,13 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 
 | ID | ROLE | EXPECTATIONS | TARGET |
-|1|User|As a player, I expect to deposit my money into my account before playing|To allow me the opportunity to place money on a bet|
-|2|User|As a player, I want to choose my desired bet type and place a bet amount within the allowed range.|To allow me the opportunity of flexibility.|
-|3|User|As a player, I want to know if I won or lost the bet and see the winnings, if applicable.|To allow for transparency and feedback, it evaluates the effectiveness of my betting strategies.|
-|4|User|As a player, I want to be able to play again or leave the table.|To allow for convenience and accessibility.|
-|5|User|As a player, I want my account balance to be updated based on the outcome and winnings of each bet.|To allow for finacial management. It provides essential information for decison-making, strategy development and goal setting.|
+|----|------|--------------|--------|
+| 1  | User | As a player, I expect to deposit my money into my account before playing. | To allow me the opportunity to place money on a bet. |
+| 2  | User | As a player, I want to choose my desired bet type and place a bet amount within the allowed range. | To allow me the opportunity of flexibility. |
+| 3  | User | As a player, I want to know if I won or lost the bet and see the winnings, if applicable. | To allow for transparency and feedback, it evaluates the effectiveness of my betting strategies. |
+| 4  | User | As a player, I want to be able to play again or leave the table. | To allow for convenience and accessibility. |
+| 5  | User | As a player, I want my account balance to be updated based on the outcome and winnings of each bet. | To allow for financial management. It provides essential information for decision-making, strategy development, and goal setting. |
+
 
 
 ## Design Wireframes
