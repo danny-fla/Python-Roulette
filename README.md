@@ -1,32 +1,126 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# 
 
-Welcome,
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+# Contents
 
-## Reminders
+- [Aims](<#Aims>)
+- [User Experience](<#user-experience-ux>)
+     - [Site Aims](<#site-aims>)
+     - [User Stories](<#user-stories>)
+     - [Design Wireframes](<#design-wireframes>)
+     - [Design Choices](<#design-choices>)
+        - [Colour Scheme](<#colour-scheme>)
+        - [Typography](<#typography>)
+- [Features](<#features>)
+- [Future Features](<#future-features>)
+- [Technologies Used](<#technologies-used>)
+- [Testing](<#testing>)
+    - [Code Validation](<#code-validation>)
+    -  [JSHint](<#jshint>)
+    - [Lighthouse Testing](<#lighthouse-testing>)
+    - [Responsive Testing](<#responsive-testing>)
+    - [Manual Testing](<#manual-testing>)
+- [Unresolved Bugs](<unresolved-bugs>)
+- [Deployment](<#deployment>)
+- [Credits](<#credits>)
+- [Acknowledgements](<#acknowledgements>)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+# Objective
+The aim of this game is to provide the user with a player friendly, fun game of chance that is carried out within a safe environment.
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+# User Experience (UX)
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Site Aims
+- To provide excitement and anticipation without financial risk involved.
+- 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
+| ID | ROLE | EXPECTATIONS | TARGET |
+|-----------------|:-------------|:---------------:|:---------------:|
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
----
+## Design Wireframes
 
-Happy coding!
+View wireframes here: 
+
+
+## Design Choices
+
+### Colour Scheme
+
+
+### Typography
+
+
+
+# Features
+
+### Home Page
+
+
+### Rules Page
+
+
+
+### High Scores Page
+
+
+### Quiz Page
+
+
+
+### Quiz Completion Page
+
+
+# Future Features
+
+## Quiz Difficulty Level
+
+
+
+# Technologies Used
+
+# Testing
+
+## Code Validation
+
+## JSHint
+
+
+## Lighthouse Testing
+
+
+## Responsive Testing
+
+
+
+## Manual Testing
+
+
+| Action        | Expected           | Actual  |
+| ------------- |:-------------:| -----:|
+
+# Unresolved Bugs
+
+
+
+# Deployment 
+
+
+## To Fork a GitHub repository, follow these steps:
+
+
+## To clone a GitHub repository, follow these steps.
+
+
+
+# Credits
+
+
+
+# Acknowledgements
+
+
