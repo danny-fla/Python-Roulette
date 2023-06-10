@@ -30,6 +30,22 @@ This is a command-line Roulette game implemented in Python. The game simulates a
 # Objective
 The aim of this project is to create an interactive Roulette game that provides the user with an enjoyable and realisitic gaming experience. The game should accurately simulate a roulette wheel, allow users to place different types of bets and provide feedback on the outcomings and winings.
 
+# How to play
+
+1. Run the "roulette_game.py" file in a Python environment.
+2. The game will prompt you to deposit money into your account. Enter your desired amount to start playing.
+3. Choose your bet type by entering the corresponding number: 
+    - 1: Red
+    - 2: Black
+    - 3: Odd
+    - 4: Even
+    - 5: Green
+    - 6: Straight (requires entering a specific number from 1 to 36)
+4. Enter the amoun you wish to bet, within the range allowed.
+5. The roulette wheel will spin and the winning outcome will be displayed.
+6. If you win your balance will be updated with your earnings along, otherwise it will detuct the bet amount.
+7. At the end of each bet you will have the optoin to play again or leave the table.
+8. When you decide to leave the table you will be informed of your closing balance amount.
 
 # User Experience (UX)
 
@@ -70,16 +86,44 @@ View wireframes here:
 - Depositing money into the player's account enables them to fund their gameplay, place bets and particiapte in the roulette game.
 - It facillitates account management, provides flexibility and enhances the overall gameplay by ensuring players have the financial means ti engage in bets and enjoy the game with a level of realisim.
 
+## Choosing type of bet:
 
+- Asking players to choose their preferred bet type (Red, Black, Odd, Even, Green or Straight) improves their entertainment, offers customisation, provides strategic decision-making opportunities and adds variety to the gameplay experience.
+- It allows players to place their bets with their personalized choices, gameplan or gut instinct which makes the game more captivating and engaging.
+
+## Bet allowances:
+
+- To promote fairness, financial planning and sensible gambling the game asks players to bet within the game's allowence.
+- This ensures players' can allow for more decision-making, encourages risk manangement and adds to the game's balance.
+- These boundaries creates a regulated environment for the player to safely enjoy the roulette experience.
+
+## Spinning roulette wheel:
+
+- Spinning the roulette wheel and finding out the winning outcomes provides excitment, spontanety, realisim and transparency for the user to enhances their engagment to the game.
+- It gives clear feedback, ensures fairness and is an entertaining prcoess in the gameplay.
+- This is an important part of the game as it add depth, excitement and originality to the roulette game experience.
+
+## Winning calculations:
+
+- Calculating and displaying winnings based on the bet and outcome of the roulette wheel spin gives the user feedback, provides them a reward and facilitates financial management.
+- It gives the user a sense of satisfation and meaningness which further contributes to the game's enjoyability.
+
+## Update account balance:
+- This is crucial for allowing the user to make in-game decision, offers financial management and provides the user with fulfiment when they are successful. 
+- They can then use this information to make informed choices based on their earnings or losses.
+
+## Play again or leave table:
+- By providing the option to play again or leave the table gives the user flexibility in making their decisions based on their convience, time and financial management.
+- This makes sure that Python Roulette's appraoch is user-centered and offers a authentic experience to each player of the game.
 
 # Future Features
 
-## Quiz Difficulty Level
-
-
+- Implement different betting strategies for a more advanced gameplay.
+- Add support for multiple players to join and allowing them to compete together.
+- Include additional statistics and analysis of gameplay, such as tracking win/loss history or calulate average winnings.
 
 # Technologies Used
-
+- Python Roulette was created using Python 3
 # Testing
 
 ## Code Validation
@@ -113,6 +157,9 @@ View wireframes here:
 ## To clone a GitHub repository, follow these steps.
 
 
+# Disclaimer
+
+This program is a gambling simulation and does not involve real money. It is intended for education and entertainment purposes only.
 
 # Credits
 
