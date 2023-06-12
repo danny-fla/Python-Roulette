@@ -53,6 +53,7 @@ class RouletteGame:
 
     def __init__(self):
         self.balance = self.add_money()
+        self.betting_history = []
 
 
     def add_money(self):
@@ -194,10 +195,24 @@ class RouletteGame:
             self.balance -= stake
             print(f"Your updated balance is €{self.balance}")
 
+            self.betting_history.append({
+                "Bet": choice,
+                "Stake": stake,
+                "Win/Loss": "Win" if winnings > 0 else "Loss"
+            })
+
+            self.display_betting_history()
+
             play_again = input("Do you want to play again? (yes/no): ")
             if play_again.lower() != "yes":
                 break
     
+    def display_betting_history(self):
+        print("Betting history: \n")
+        for bet in self.betting_history:
+            print(f"Bet: {bet['Bet']}, Stake: €{bet['Stake']}, Result: {bet['Win/Loss']}")
+        print()
+
 
     def play(self):
         while True:
