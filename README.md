@@ -28,7 +28,7 @@ This is a command-line Roulette game implemented in Python. The game simulates a
 - [Acknowledgements](<#acknowledgements>)
 
 # Objective
-The aim of this project is to create an interactive Roulette game that provides the user with an enjoyable and realisitic gaming experience. The game should accurately simulate a roulette wheel, allow users to place different types of bets and provide feedback on the outcomings and winings.
+The aim of this project is to create an interactive Roulette game that provides the user with an enjoyable and realisitic gaming experience. The game should accurately simulate a roulette wheel, allow users to place different types of bets and provide feedback on the outcomes and winings.
 
 # How to play
 
@@ -41,10 +41,10 @@ The aim of this project is to create an interactive Roulette game that provides 
     - 4: Even
     - 5: Green
     - 6: Straight (requires entering a specific number from 1 to 36)
-4. Enter the amoun you wish to bet, within the range allowed.
+4. Enter the amount you wish to bet, within the range allowed.
 5. The roulette wheel will spin and the winning outcome will be displayed.
-6. If you win your balance will be updated with your earnings along, otherwise it will detuct the bet amount.
-7. At the end of each bet you will have the optoin to play again or leave the table.
+6. If you win, your balance will be updated with your earnings, otherwise it will deduct the amount of the bet placed.
+7. At the end of each spin you will have the option to play again or leave the table.
 8. When you decide to leave the table you will be informed of your closing balance amount.
 
 # User Experience (UX)
@@ -58,7 +58,7 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 | ID | ROLE | EXPECTATIONS | TARGET |
 |----|------|--------------|--------|
 | 1  | User | As a player, I expect to deposit my money into my account before playing. | To allow me the opportunity to place money on a bet. |
-| 2  | User | As a player, I want to choose my desired bet type and place a bet amount within the allowed range. | To allow me the opportunity of flexibility. |
+| 2  | User | As a player, I expect the choice of choosing my desired type of bet and place said bet amount within the range allowed in the game. | Therefore allowing me the opportunity for flexibility. |
 | 3  | User | As a player, I want to know if I won or lost the bet and see the winnings, if applicable. | To allow for transparency and feedback, it evaluates the effectiveness of my betting strategies. |
 | 4  | User | As a player, I want to be able to play again or leave the table. | To allow for convenience and accessibility. |
 | 5  | User | As a player, I want my account balance to be updated based on the outcome and winnings of each bet. | To allow for financial management. It provides essential information for decision-making, strategy development, and goal setting. |
@@ -143,6 +143,16 @@ View wireframes here:
 
 | Action        | Expected           | Actual  |
 | ------------- |:-------------:| -----:|
+| Deposit money into the account | The account balance should update accordingly | Account balance is correctly updated |
+| Chose a bet type (e.g. Red, Odd) | The chosen bet type should be registered| Bet type is correctly registered |
+| Enter a valid bet amount within the allowed range | The bet amount should be accepted | The bet amount is accepted |
+| Spin the roulette wheel | The wheel should spin and land on random number and colour | The roulette wheel spins and successfully lands on a random number and colour |
+| Check the bet outcome | Based on the outcome of the spin the game should determine if the bet is correct or incorrect | Outcome of the bet is correctly determined |
+| Display winnings if bet is successful | If the bet wins the winnings should be displayed to user | Winnings are correctly displayed |
+| Option to play again or leave table is prompted |The player should have the option to quit the game of continue playing | The option to play or leave is correctly provided |
+| Repeat the steps to play another round | The game should allow for multiple rounds of gameplay | Multiple rounds of gameplay is possible |
+| Verify the user's final balance upon exiting th game | The user's final balance should be correctly updated and displayed | The user's final balance is correctly displayed |
+
 
 # Unresolved Bugs
 
