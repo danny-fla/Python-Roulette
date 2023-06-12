@@ -124,7 +124,7 @@ class RouletteGame:
                         return bet_amount
                     else:
                         print("I'm sorry, you do not have enough in your account.")
-                        print(f"You're balance is {self.balance}")
+                        print(f"You're balance is €{self.balance}")
                         add_more_money = input("Would you like to add more money? (yes/no): ")
                         if add_more_money.lower() == "yes":
                             deposit_amount = self.add_money()
