@@ -92,6 +92,11 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 - Calculating and displaying winnings based on the bet and outcome of the roulette wheel spin gives the user feedback, provides them a reward and facilitates financial management.
 - It gives the user a sense of satisfation and meaningness which further contributes to the game's enjoyability.
 
+## Betting history tracking:
+
+- After the end of each spin of the wheel the user's bet and stake along with the outcome of the bet is displayed to the user.
+- This provides the user with a comprehensive overview of their betting activity throughout the game.
+
 ## Update account balance:
 - This is crucial for allowing the user to make in-game decision, offers financial management and provides the user with fulfiment when they are successful. 
 - They can then use this information to make informed choices based on their earnings or losses.
@@ -104,7 +109,7 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 - Implement different betting strategies for a more advanced gameplay.
 - Add support for multiple players to join and allowing them to compete together.
-- Include additional statistics and analysis of gameplay, such as tracking win/loss history or calulate average winnings.
+- Include additional statistics and analysis of gameplay, such as calulate average winnings.
 
 # Technologies Used
 - Python Roulette was created using Python 3
@@ -132,6 +137,7 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 | Spin the roulette wheel | The wheel should spin and land on random number and colour | The roulette wheel spins and successfully lands on a random number and colour |
 | Check the bet outcome | Based on the outcome of the spin the game should determine if the bet is correct or incorrect | Outcome of the bet is correctly determined |
 | Display winnings if bet is successful | If the bet wins the winnings should be displayed to user | Winnings are correctly displayed |
+| Track and display betting history | The type of bet, user's stake and whether they won or lost should be displayed at the end of each spin | Betting history is correctly displayed |
 | Option to play again or leave table is prompted |The player should have the option to quit the game of continue playing | The option to play or leave is correctly provided |
 | Repeat the steps to play another round | The game should allow for multiple rounds of gameplay | Multiple rounds of gameplay is possible |
 | Exhaust the account balance by repeatedly placing bets | Display a message indicating that the account balance is empty and prompt the user to add more money | Message is displayed, informing the user about the empty account balance and requesting to add more money |
