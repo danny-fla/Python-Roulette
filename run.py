@@ -55,6 +55,9 @@ class RouletteGame:
         self.balance = self.add_money()
         #  Initialize an empty list to store the user's betting history
         self.betting_history = []
+        self.total_wins = 0
+        self.total_games = 0
+        
 
 
     def add_money(self):
@@ -79,7 +82,8 @@ class RouletteGame:
             3: 'Odd',
             4: 'Even',
             5: 'Green',
-            6: 'Straight'
+            6: 'Straight',
+            7: 'Dozen'
         }
 
         print("Type '1' for Red.")
@@ -88,6 +92,7 @@ class RouletteGame:
         print("Type '4' for Even.")
         print("Type '5' for Green.")
         print("Type '6' for Straight")
+        print("Type '7' for Dozen")
 
         bet_choices = []
 
@@ -104,15 +109,32 @@ class RouletteGame:
                                 if 1 <= straight_number <= 36:
                                     return f"Straight {straight_number}"
                                 else:
-                                    print("Error: Invalid straight number. Please enter a number from 1 to 36.")
+                                    print("Error: Invalid straight number. Please enter a number from 1 to 36: ")
                             else:
-                                print("Error: Invalid input. Please enter a number.")
+                                print("Error: Invalid input. Please enter a number:")
+                    elif bet_mapping[bet_choice] == 'Dozen':
+                        dozen_numbers_list = []
+                        while len(dozen_numbers_list) < 12:
+                            dozen_number = input('Enter a number (1-36) you wish to bet on ({} out of 12): '.format(len(dozen_numbers_list) + 1))
+                            if dozen_number.isdigit():
+                                dozen_number = int(dozen_number)
+                                if 1 <= dozen_number <= 36:
+                                    if dozen_number not in dozen_numbers_list:
+                                        dozen_numbers_list.append(dozen_number)
+                                    else:
+                                        print("Error: Number already chosen. Please enter a different number.")
+                                else:
+                                    print("Error: Invalid input. Please enter a number from 1-36. ")
+                            else:
+                                print("Error: Invalid input. Please enter 12 numbers.")
+
+                        return f"Dozen {dozen_numbers_list}"
                     else:
                         return bet_mapping[bet_choice]
                 else:
-                    print("Error: Invalid bet choice. Please enter a number from 1 to 6.")
+                    print("Error: Invalid bet choice. Please enter a number from 1 to 7. ")
             else:
-                print("Error: Invalid input. Please enter a number.")
+                print("Error: Invalid input. Please enter a number. ")
 
 
     def get_bet_amount(self, choice):
@@ -177,12 +199,21 @@ class RouletteGame:
             if straight_number == winning_number:
                 print("Checking if straight")
                 winnings = int(stake) * 35
+        elif choice.startswith('Dozen'):
+            dozen_numbers = [int(number) for number in choice[7:-1].split(',')]
+            if winning_number in dozen_numbers:
+                winnings = int(stake) * 3
+                return winnings
+            else:
+                return 0
+
 
         return winnings
 
 
     def play_game(self):
         while True:
+            self.total_games += 1
             choice = self.get_bet_choice()
             stake = self.get_bet_amount(choice)
 
@@ -192,11 +223,13 @@ class RouletteGame:
             print(f"The ball has landed on {winning_color} {winning_number}")
             if winnings > 0:
                 print(f"Congratulations! You bet €{stake}, and you won €{winnings}!")
+                self.total_wins += 1
             else:
                 print("Hard luck")
             
             self.balance += winnings
             self.balance -= stake
+        
             print(f"Your updated balance is €{self.balance}")
 
             self.betting_history.append({
@@ -206,6 +239,7 @@ class RouletteGame:
             })
 
             self.display_betting_history()
+            self.display_winning_percentage()
 
             play_again = input("Do you want to play again? (yes/no): ")
             if play_again.lower() != "yes":
@@ -217,6 +251,12 @@ class RouletteGame:
             print(f"Bet: {bet['Bet']}, Stake: €{bet['Stake']}, Result: {bet['Win/Loss']}")
         print()
 
+    def display_winning_percentage(self):
+        win_percentage = (self.total_wins / self.total_games) * 100
+        formatted_win_percentage = format(win_percentage, ".1f")
+        print(formatted_win_percentage)
+        print(f"Your win percentage is: {formatted_win_percentage}%")
+        print()
 
     def play(self):
         while True:
@@ -225,7 +265,7 @@ class RouletteGame:
             if continue_playing.lower() != "no":
                 break
 
-        print('Your closing balance is: € ', self.balance)
+        print('Your closing balance is: €', self.balance)
     
 
 game = RouletteGame()
