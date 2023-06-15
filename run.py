@@ -53,6 +53,7 @@ class RouletteGame:
 
     def __init__(self):
         self.balance = self.add_money()
+        #  Initialize an empty list to store the user's betting history
         self.betting_history = []
 
 
@@ -118,6 +119,7 @@ class RouletteGame:
     # Function to get the amount of money the user wants to bet
         while True:
             bet_amount = input("How much do you wish to bet? €")
+            # Validates user's input is a valid entry
             if bet_amount.isdigit():
                 bet_amount = int(bet_amount)
                 if self.MIN_BET_AMOUNT <= bet_amount <= self.MAX_BET_AMOUNT:
@@ -138,6 +140,7 @@ class RouletteGame:
 
     def spin_roulette_wheel(self):
     # Function to generate the game's winnging number and colour
+    # Added a time delay to give the effect of a wheel spinning
         print("Roulette wheel spinning...")
         time.sleep(1)
         for _ in range(3):
@@ -155,6 +158,7 @@ class RouletteGame:
 
     def check_winnings(self, winning_color, winning_number, choice, stake):
     # Funciton to check if the user has won any money
+    # Pays the winnings according to the bet odds
         winnings = 0
         if winning_color == choice:
             print("Checking winning color")
