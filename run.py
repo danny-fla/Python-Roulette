@@ -102,32 +102,10 @@ class RouletteGame:
                 bet_choice = int(bet_choice)
                 if bet_choice in bet_mapping:
                     if bet_mapping[bet_choice] == 'Straight':
-                        while True:
-                            straight_number = input('Enter the specific number (1-36) you want to bet on: ')
-                            if straight_number.isdigit():
-                                straight_number = int(straight_number)
-                                if 1 <= straight_number <= 36:
-                                    return f"Straight {straight_number}"
-                                else:
-                                    print("Error: Invalid straight number. Please enter a number from 1 to 36: ")
-                            else:
-                                print("Error: Invalid input. Please enter a number:")
+                        straight_number = self.get_straight_number()
+                        return f"Straight {straight_number}"
                     elif bet_mapping[bet_choice] == 'Dozen':
-                        dozen_numbers_list = []
-                        while len(dozen_numbers_list) < 12:
-                            dozen_number = input('Enter a number (1-36) you wish to bet on ({} out of 12): '.format(len(dozen_numbers_list) + 1))
-                            if dozen_number.isdigit():
-                                dozen_number = int(dozen_number)
-                                if 1 <= dozen_number <= 36:
-                                    if dozen_number not in dozen_numbers_list:
-                                        dozen_numbers_list.append(dozen_number)
-                                    else:
-                                        print("Error: Number already chosen. Please enter a different number.")
-                                else:
-                                    print("Error: Invalid input. Please enter a number from 1-36. ")
-                            else:
-                                print("Error: Invalid input. Please enter 12 numbers.")
-
+                        dozen_numbers_list = self.get_dozen_list()
                         return f"Dozen {dozen_numbers_list}"
                     else:
                         return bet_mapping[bet_choice]
@@ -135,6 +113,36 @@ class RouletteGame:
                     print("Error: Invalid bet choice. Please enter a number from 1 to 7. ")
             else:
                 print("Error: Invalid input. Please enter a number. ")
+
+    def get_straight_number(self):
+         while True:
+            straight_number = input('Enter the specific number (1-36) you want to bet on: ')
+            if straight_number.isdigit():
+                straight_number = int(straight_number)
+                if 1 <= straight_number <= 36:
+                    return straight_number
+                else:
+                    print("Error: Invalid straight number. Please enter a number from 1 to 36: ")
+            else:
+                print("Error: Invalid input. Please enter a number:")
+
+    def get_dozen_list(self):
+        dozen_numbers_list = []
+        while len(dozen_numbers_list) < 12:
+            dozen_number = input('Enter a number (1-36) you wish to bet on ({} out of 12): '.format(len(dozen_numbers_list) + 1))
+            if dozen_number.isdigit():
+                dozen_number = int(dozen_number)
+                if 1 <= dozen_number <= 36:
+                    if dozen_number not in dozen_numbers_list:
+                        dozen_numbers_list.append(dozen_number)
+                    else:
+                        print("Error: Number already chosen. Please enter a different number.")
+                else:
+                    print("Error: Invalid input. Please enter a number from 1-36. ")
+            else:
+                print("Error: Invalid input. Please enter 12 numbers.")
+
+        return dozen_numbers_list
 
 
     def get_bet_amount(self, choice):
