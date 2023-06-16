@@ -1,6 +1,11 @@
+from art import *
 import random
 import time
+from colorama import Fore, Style
 
+welcome_text = "Welcome to Python Roulette!"
+my_art = text2art(welcome_text, font='block', chr_ignore=True)
+print(my_art)
 
 class RouletteGame:
     MIN_BET_AMOUNT = 1
@@ -64,7 +69,7 @@ class RouletteGame:
     # Function to prompt user to add money into their account
         while True:
             try:
-                amount = int(input("How much would you like to deposit? €\n"))
+                amount = int(input(Fore.YELLOW + "How much would you like to deposit? €\n" + Style.RESET_ALL))
                 if amount > 0:
                     break
                 else:
