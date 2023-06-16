@@ -62,10 +62,20 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 # Features
 
-## Money deposit:
+## RouletteGame class:
 
-- Depositing money into the player's account enables them to fund their gameplay, place bets and particiapte in the roulette game.
-- It facillitates account management, provides flexibility and enhances the overall gameplay by ensuring players have the financial means ti engage in bets and enjoy the game with a level of realisim.
+- The code defines a RouletteGame class that encapsulates the game logic and data. 
+- It handles user interactions, manages the game state, and tracks the user's balance, betting history, and win statistics,
+
+## User Interface:
+
+- The code utilizes the art library to generate ASCII art for the game's welcome message.
+- It also uses the colorama library to add color and style to the console output, enhancing the user experience.
+
+## Game Initialization:
+
+- Upon starting the game, the user is prompted to add money to their account by specifying the deposit amount.
+- The entered amount is validated, and the balance is updated accordingly.
 
 ## Choosing type of bet:
 

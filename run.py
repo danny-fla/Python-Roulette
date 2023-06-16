@@ -3,9 +3,19 @@ import random
 import time
 from colorama import Fore, Style
 
-welcome_text = "Welcome to Python Roulette!"
-my_art = text2art(welcome_text, font='block', chr_ignore=True)
-print(my_art)
+welcome_text = """
+    
+ __          __    _                                _           _____         _    _                     _____                _        _    _        
+ \ \        / /   | |                              | |         |  __ \       | |  | |                   |  __ \              | |      | |  | |       
+  \ \  /\  / /___ | |  ___  ___   _ __ ___    ___  | |_  ___   | |__) |_   _ | |_ | |__    ___   _ __   | |__) | ___   _   _ | |  ___ | |_ | |_  ___ 
+   \ \/  \/ // _ \| | / __|/ _ \ | '_ ` _ \  / _ \ | __|/ _ \  |  ___/| | | || __|| '_ \  / _ \ | '_ \  |  _  / / _ \ | | | || | / _ \| __|| __|/ _ \
+    \  /\  /|  __/| || (__| (_) || | | | | ||  __/ | |_| (_) | | |    | |_| || |_ | | | || (_) || | | | | | \ \| (_) || |_| || ||  __/| |_ | |_|  __/
+     \/  \/  \___||_| \___|\___/ |_| |_| |_| \___|  \__|\___/  |_|     \__, | \__||_| |_| \___/ |_| |_| |_|  \_\\___/  \__,_||_| \___| \__| \__|\___|
+                                                                        __/ |                                                                        
+                                                                       |___/                                                                         
+                                                         
+"""
+print(welcome_text)
 
 class RouletteGame:
     MIN_BET_AMOUNT = 1
@@ -172,11 +182,30 @@ class RouletteGame:
             else:
                 print(Fore.RED + "Error: Invalid input. Please enter a number." + Style.RESET_ALL)
 
+    
+    def spin_animation(self):
+        # Define the frames of the spinning animation
+        frames = ["|", "/", "-", "\\"]
+        
+        # Define the duration (in seconds) for each frame
+        frame_duration = 0.1
+        
+        # Number of times to repeat the animation
+        num_iterations = 3
+        
+        for _ in range(num_iterations):
+            for frame in frames:
+                # Print the current frame, overwrite the previous frame
+                print(frame, end="\r")
+                # Wait for the specified duration
+                time.sleep(frame_duration)
+
 
     def spin_roulette_wheel(self):
-    # Function to generate the game's winnging number and colour
+    # Function to generate the game's winning number and color
     # Added a time delay to give the effect of a wheel spinning
         print(Fore.MAGENTA + "Roulette wheel spinning...")
+        self.spin_animation()  # Add spinning animation before wheel spinning
         time.sleep(1)
         for _ in range(3):
             print("." * random.randint(3, 6))
@@ -188,7 +217,9 @@ class RouletteGame:
             time.sleep(1)
         winning_number = random.choice(self.wheel_numbers)
         winning_color = self.number_colors[winning_number]
+        self.spin_animation()  # Add spinning animation after wheel spinning
         return winning_color, winning_number
+
 
 
     def check_winnings(self, winning_color, winning_number, choice, stake):
@@ -196,21 +227,17 @@ class RouletteGame:
     # Pays the winnings according to the bet odds
         winnings = 0
         if winning_color == choice:
-            print("Checking winning color")
             if winning_color == 'Red' or winning_color == 'Black':
                 winnings = int(stake) * 2
             elif winning_color == 'Green':
                 winnings = int(stake) * 35
         elif winning_number % 2 != 0 and choice == 'Odd':
-            print("Checking if odd")
             winnings = int(stake) * 2
         elif winning_number % 2 == 0 and choice == 'Even':
-            print("Checking if even")
             winnings = int(stake) * 2
         elif choice.startswith('Straight'):
             straight_number = int(choice.split()[1])
             if straight_number == winning_number:
-                print("Checking if straight")
                 winnings = int(stake) * 35
         elif choice.startswith('Dozen'):
             dozen_numbers = [int(number) for number in choice[7:-1].split(',')]
@@ -267,7 +294,6 @@ class RouletteGame:
     def display_winning_percentage(self):
         win_percentage = (self.total_wins / self.total_games) * 100
         formatted_win_percentage = format(win_percentage, ".1f")
-        print(formatted_win_percentage)
         print(Fore.GREEN + f"Your win percentage is: {formatted_win_percentage}%" + Style.RESET_ALL)
         print()
 
