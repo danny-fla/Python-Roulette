@@ -119,8 +119,27 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 - Include additional statistics and analysis of gameplay, such as win/loss ratio, winning streaks and other relevant data.
 - Different roulette variations: Include support for different variations of roulette, such as European, American, or French roulette.
 
-# Technologies Used
-- Python Roulette was created using Python 3
+# Code Structure
+- roulette_game.py: Main file containing the RouletteGame class and the game logic.
+- __init__: Initializes the game object and sets the initial balance and betting history.
+- add_money: Prompts the user to add money to their game account.
+- get_bet_choice: Prompts the user to choose a bet type.
+- get_straight_number: Prompts the user to enter a specific number for a straight bet.
+- get_dozen_list: Prompts the user to enter 12 numbers for a dozen bet.
+- get_bet_amount: Prompts the user to enter the bet amount.
+- spin_animation: Displays a spinning animation before and after spinning the roulette wheel.
+- spin_roulette_wheel: Simulates the spinning of the roulette wheel and returns the winning number and color.
+- check_winnings: Checks if the user has won any money based on the bet and the wheel outcome.
+- play_game: Main game loop that handles the entire gameplay process.
+- display_betting_history: Displays the user's betting history.
+- display_winning_percentage: Displays the user's win percentage.
+- play: Starts the game and allows the user to play multiple rounds.
+
+
+# Dependencies:
+
+- Python Roulette was created using Python 3.x
+- colorama library (install using pip install colorama)
 # Testing
 
 ## Code Validation
@@ -154,25 +173,17 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 # Unresolved Bugs
 
-
-
 # Deployment 
-
-
-## To Fork a GitHub repository, follow these steps:
-
-
-## To clone a GitHub repository, follow these steps.
-
 
 # Disclaimer
 
 This program is a gambling simulation and does not involve real money. It is intended for education and entertainment purposes only.
 
-# Credits
+# Acknowledgements:
+- The Roulette Game was inspired by the Slot Machine Game developed by [techwithtim].
+- The structure and logic of the Slot Machine Game served as a reference and provided inspiration for the development of this Roulette Game.
+- Original Slot Machine Game source code: [https://github.com/techwithtim/Python-Slot-Machine/blob/main/main.py]
+- I want to thank my mentor, Code Institute's Mentor Assistance and all the members of the Slack community for their support and guidance throughout the creation of this project.
 
-
-
-# Acknowledgements
 
 

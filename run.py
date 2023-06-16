@@ -1,3 +1,11 @@
+"""
+Roulette Game (inspired by Slot Machine Game)
+
+This game is inspired by the Slot Machine Game developed by [techwithtim]. 
+The structure and logic of the Slot Machine Game served as a reference and provided inspiration for the development of this Roulette Game.
+
+Original Slot Machine Game source code: [https://github.com/techwithtim/Python-Slot-Machine/blob/main/main.py]
+"""
 import random
 import time
 from colorama import Fore, Style
