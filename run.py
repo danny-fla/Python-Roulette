@@ -195,7 +195,7 @@ class RouletteGame:
             if winning_color == 'Red' or winning_color == 'Black':
                 winnings = int(stake) * 2
             elif winning_color == 'Green':
-                winnings = int(stake) * 15
+                winnings = int(stake) * 35
         elif winning_number % 2 != 0 and choice == 'Odd':
             print("Checking if odd")
             winnings = int(stake) * 2
@@ -273,7 +273,7 @@ class RouletteGame:
             if continue_playing.lower() != "no":
                 break
 
-        print('Your closing balance is: €', self.balance)
+        print('Your closing balance is: €',self.balance)
     
 
 game = RouletteGame()
