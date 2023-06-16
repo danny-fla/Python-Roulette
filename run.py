@@ -1,21 +1,6 @@
-from art import *
 import random
 import time
 from colorama import Fore, Style
-
-welcome_text = """
-    
- __          __    _                                _           _____         _    _                     _____                _        _    _        
- \ \        / /   | |                              | |         |  __ \       | |  | |                   |  __ \              | |      | |  | |       
-  \ \  /\  / /___ | |  ___  ___   _ __ ___    ___  | |_  ___   | |__) |_   _ | |_ | |__    ___   _ __   | |__) | ___   _   _ | |  ___ | |_ | |_  ___ 
-   \ \/  \/ // _ \| | / __|/ _ \ | '_ ` _ \  / _ \ | __|/ _ \  |  ___/| | | || __|| '_ \  / _ \ | '_ \  |  _  / / _ \ | | | || | / _ \| __|| __|/ _ \
-    \  /\  /|  __/| || (__| (_) || | | | | ||  __/ | |_| (_) | | |    | |_| || |_ | | | || (_) || | | | | | \ \| (_) || |_| || ||  __/| |_ | |_|  __/
-     \/  \/  \___||_| \___|\___/ |_| |_| |_| \___|  \__|\___/  |_|     \__, | \__||_| |_| \___/ |_| |_| |_|  \_\\___/  \__,_||_| \___| \__| \__|\___|
-                                                                        __/ |                                                                        
-                                                                       |___/                                                                         
-                                                         
-"""
-print(welcome_text)
 
 class RouletteGame:
     MIN_BET_AMOUNT = 1
@@ -73,8 +58,6 @@ class RouletteGame:
         self.total_wins = 0
         self.total_games = 0
         
-
-
     def add_money(self):
     # Function to prompt user to add money into their account
         while True:
@@ -87,7 +70,6 @@ class RouletteGame:
             except ValueError:
                 print(Fore.RED + "Please enter a valid number." + Style.RESET_ALL)
         return amount
-
 
     def get_bet_choice(self):
     # Function to get the user's desired bet choice
@@ -159,7 +141,6 @@ class RouletteGame:
 
         return dozen_numbers_list
 
-
     def get_bet_amount(self, choice):
     # Function to get the amount of money the user wants to bet
         while True:
@@ -181,7 +162,6 @@ class RouletteGame:
                     print(Fore.RED + "Error: Invalid bet amount. Minimum bet is €1. Maximum bet is €5000." + Style.RESET_ALL)
             else:
                 print(Fore.RED + "Error: Invalid input. Please enter a number." + Style.RESET_ALL)
-
     
     def spin_animation(self):
         # Define the frames of the spinning animation
@@ -199,7 +179,6 @@ class RouletteGame:
                 print(frame, end="\r")
                 # Wait for the specified duration
                 time.sleep(frame_duration)
-
 
     def spin_roulette_wheel(self):
     # Function to generate the game's winning number and color
@@ -219,8 +198,6 @@ class RouletteGame:
         winning_color = self.number_colors[winning_number]
         self.spin_animation()  # Add spinning animation after wheel spinning
         return winning_color, winning_number
-
-
 
     def check_winnings(self, winning_color, winning_number, choice, stake):
     # Funciton to check if the user has won any money
@@ -246,10 +223,7 @@ class RouletteGame:
                 return winnings
             else:
                 return 0
-
-
         return winnings
-
 
     def play_game(self):
         while True:
@@ -306,6 +280,5 @@ class RouletteGame:
 
         print(Fore.YELLOW + 'Your closing balance is: €',self.balance)
     
-
 game = RouletteGame()
 game.play()

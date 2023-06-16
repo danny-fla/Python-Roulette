@@ -116,7 +116,8 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 - Implement different betting strategies for a more advanced gameplay.
 - Add support for multiple players to join and allowing them to compete together.
-- Include additional statistics and analysis of gameplay, such as calulate average winnings.
+- Include additional statistics and analysis of gameplay, such as win/loss ratio, winning streaks and other relevant data.
+- Different roulette variations: Include support for different variations of roulette, such as European, American, or French roulette.
 
 # Technologies Used
 - Python Roulette was created using Python 3
