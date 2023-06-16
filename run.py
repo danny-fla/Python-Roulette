@@ -64,7 +64,7 @@ class RouletteGame:
     # Function to prompt user to add money into their account
         while True:
             try:
-                amount = int(input("How much would you like to deposit? €"))
+                amount = int(input("How much would you like to deposit? €\n"))
                 if amount > 0:
                     break
                 else:
@@ -97,7 +97,7 @@ class RouletteGame:
         bet_choices = []
 
         while True:
-            bet_choice = input("Enter the number corresponding to your desired bet: ")
+            bet_choice = input("Enter the number corresponding to your desired bet: \n")
             if bet_choice.isdigit():
                 bet_choice = int(bet_choice)
                 if bet_choice in bet_mapping:
@@ -116,7 +116,7 @@ class RouletteGame:
 
     def get_straight_number(self):
          while True:
-            straight_number = input('Enter the specific number (1-36) you want to bet on: ')
+            straight_number = input('Enter the specific number (1-36) you want to bet on: \n')
             if straight_number.isdigit():
                 straight_number = int(straight_number)
                 if 1 <= straight_number <= 36:
@@ -129,7 +129,7 @@ class RouletteGame:
     def get_dozen_list(self):
         dozen_numbers_list = []
         while len(dozen_numbers_list) < 12:
-            dozen_number = input('Enter a number (1-36) you wish to bet on ({} out of 12): '.format(len(dozen_numbers_list) + 1))
+            dozen_number = input('Enter a number (1-36) you wish to bet on ({} out of 12): \n'.format(len(dozen_numbers_list) + 1))
             if dozen_number.isdigit():
                 dozen_number = int(dozen_number)
                 if 1 <= dozen_number <= 36:
@@ -148,7 +148,7 @@ class RouletteGame:
     def get_bet_amount(self, choice):
     # Function to get the amount of money the user wants to bet
         while True:
-            bet_amount = input("How much do you wish to bet? €")
+            bet_amount = input("How much do you wish to bet? €\n")
             # Validates user's input is a valid entry
             if bet_amount.isdigit():
                 bet_amount = int(bet_amount)
@@ -158,7 +158,7 @@ class RouletteGame:
                     else:
                         print("I'm sorry, you do not have enough in your account.")
                         print(f"You're balance is €{self.balance}")
-                        add_more_money = input("Would you like to add more money? (yes/no): ")
+                        add_more_money = input("Would you like to add more money? (yes/no): \n")
                         if add_more_money.lower() == "yes":
                             deposit_amount = self.add_money()
                             self.balance += deposit_amount
@@ -249,7 +249,7 @@ class RouletteGame:
             self.display_betting_history()
             self.display_winning_percentage()
 
-            play_again = input("Do you want to play again? (yes/no): ")
+            play_again = input("Do you want to play again? (yes/no): \n")
             if play_again.lower() != "yes":
                 break
     
@@ -269,7 +269,7 @@ class RouletteGame:
     def play(self):
         while True:
             self.play_game()
-            continue_playing = input("Do you want to leave the table? (yes/no): ")
+            continue_playing = input("Do you want to leave the table? (yes/no): \n")
             if continue_playing.lower() != "no":
                 break
 
