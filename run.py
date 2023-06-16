@@ -73,9 +73,9 @@ class RouletteGame:
                 if amount > 0:
                     break
                 else:
-                    print("Minimum deposit is €1.")
+                    print(Fore.RED + "Minimum deposit is €1." + Style.RESET_ALL)
             except ValueError:
-                print("Please enter a valid number.")
+                print(Fore.RED + "Please enter a valid number." + Style.RESET_ALL)
         return amount
 
 
@@ -91,18 +91,18 @@ class RouletteGame:
             7: 'Dozen'
         }
 
-        print("Type '1' for Red.")
-        print("Type '2' for Black.")
-        print("Type '3' for Odd.")
-        print("Type '4' for Even.")
-        print("Type '5' for Green.")
-        print("Type '6' for Straight")
-        print("Type '7' for Dozen")
+        print(Fore.MAGENTA + "Type '1' for Red.")
+        print(Fore.MAGENTA + "Type '2' for Black.")
+        print(Fore.MAGENTA + "Type '3' for Odd.")
+        print(Fore.MAGENTA + "Type '4' for Even.")
+        print(Fore.MAGENTA + "Type '5' for Green.")
+        print(Fore.MAGENTA + "Type '6' for Straight")
+        print(Fore.MAGENTA + "Type '7' for Dozen")
 
         bet_choices = []
 
         while True:
-            bet_choice = input("Enter the number corresponding to your desired bet: \n")
+            bet_choice = input(Fore.YELLOW + "Enter the number corresponding to your desired bet: \n" + Style.RESET_ALL)
             if bet_choice.isdigit():
                 bet_choice = int(bet_choice)
                 if bet_choice in bet_mapping:
@@ -115,37 +115,37 @@ class RouletteGame:
                     else:
                         return bet_mapping[bet_choice]
                 else:
-                    print("Error: Invalid bet choice. Please enter a number from 1 to 7. ")
+                    print(Fore.RED + "Error: Invalid bet choice. Please enter a number from 1 to 7. " + Style.RESET_ALL)
             else:
-                print("Error: Invalid input. Please enter a number. ")
+                print(Fore.RED + "Error: Invalid input. Please enter a number. " + Style.RESET_ALL)
 
     def get_straight_number(self):
          while True:
-            straight_number = input('Enter the specific number (1-36) you want to bet on: \n')
+            straight_number = input(Fore.YELLOW + 'Enter the specific number (1-36) you want to bet on: \n' + Style.RESET_ALL)
             if straight_number.isdigit():
                 straight_number = int(straight_number)
                 if 1 <= straight_number <= 36:
                     return straight_number
                 else:
-                    print("Error: Invalid straight number. Please enter a number from 1 to 36: ")
+                    print(Fore.RED + "Error: Invalid straight number. Please enter a number from 1 to 36: " + Style.RESET_ALL)
             else:
-                print("Error: Invalid input. Please enter a number:")
+                print(Fore.RED + "Error: Invalid input. Please enter a number:" + Style.RESET_ALL)
 
     def get_dozen_list(self):
         dozen_numbers_list = []
         while len(dozen_numbers_list) < 12:
-            dozen_number = input('Enter a number (1-36) you wish to bet on ({} out of 12): \n'.format(len(dozen_numbers_list) + 1))
+            dozen_number = input(Fore.YELLOW + 'Enter a number (1-36) you wish to bet on ({} out of 12): \n'.format(len(dozen_numbers_list) + 1) + Style.RESET_ALL)
             if dozen_number.isdigit():
                 dozen_number = int(dozen_number)
                 if 1 <= dozen_number <= 36:
                     if dozen_number not in dozen_numbers_list:
                         dozen_numbers_list.append(dozen_number)
                     else:
-                        print("Error: Number already chosen. Please enter a different number.")
+                        print(Fore.RED + "Error: Number already chosen. Please enter a different number." + Style.RESET_ALL)
                 else:
-                    print("Error: Invalid input. Please enter a number from 1-36. ")
+                    print(Fore.RED + "Error: Invalid input. Please enter a number from 1-36. " + Style.RESET_ALL)
             else:
-                print("Error: Invalid input. Please enter 12 numbers.")
+                print(Fore.RED + "Error: Invalid input. Please enter 12 numbers." + Style.RESET_ALL)
 
         return dozen_numbers_list
 
@@ -153,7 +153,7 @@ class RouletteGame:
     def get_bet_amount(self, choice):
     # Function to get the amount of money the user wants to bet
         while True:
-            bet_amount = input("How much do you wish to bet? €\n")
+            bet_amount = input(Fore.YELLOW + "How much do you wish to bet? €\n" + Style.RESET_ALL)
             # Validates user's input is a valid entry
             if bet_amount.isdigit():
                 bet_amount = int(bet_amount)
@@ -161,27 +161,27 @@ class RouletteGame:
                     if bet_amount <= self.balance:
                         return bet_amount
                     else:
-                        print("I'm sorry, you do not have enough in your account.")
-                        print(f"You're balance is €{self.balance}")
-                        add_more_money = input("Would you like to add more money? (yes/no): \n")
+                        print(Fore.RED + "I'm sorry, you do not have enough in your account." + Style.RESET_ALL)
+                        print(Fore.RED + f"You're balance is €{self.balance}" + Style.RESET_ALL)
+                        add_more_money = input(Fore.YELLOW + "Would you like to add more money? (yes/no): \n" + Style.RESET_ALL)
                         if add_more_money.lower() == "yes":
                             deposit_amount = self.add_money()
                             self.balance += deposit_amount
                 else:
-                    print("Error: Invalid bet amount. Minimum bet is €1. Maximum bet is €5000.")
+                    print(Fore.RED + "Error: Invalid bet amount. Minimum bet is €1. Maximum bet is €5000." + Style.RESET_ALL)
             else:
-                print("Error: Invalid input. Please enter a number.")
+                print(Fore.RED + "Error: Invalid input. Please enter a number." + Style.RESET_ALL)
 
 
     def spin_roulette_wheel(self):
     # Function to generate the game's winnging number and colour
     # Added a time delay to give the effect of a wheel spinning
-        print("Roulette wheel spinning...")
+        print(Fore.MAGENTA + "Roulette wheel spinning...")
         time.sleep(1)
         for _ in range(3):
             print("." * random.randint(3, 6))
             time.sleep(1)
-        print("No more bets.")
+        print(Fore.MAGENTA + "No more bets.")
         time.sleep(2)
         for _ in range(3):
             print("." * random.randint(3, 6))
@@ -233,12 +233,12 @@ class RouletteGame:
             winning_color, winning_number = self.spin_roulette_wheel()
             winnings = self.check_winnings(winning_color, winning_number, choice, stake)
 
-            print(f"The ball has landed on {winning_color} {winning_number}")
+            print(Fore.YELLOW + f"The ball has landed on {winning_color} {winning_number}" + Style.RESET_ALL)
             if winnings > 0:
-                print(f"Congratulations! You bet €{stake}, and you won €{winnings}!")
+                print(Fore.GREEN + f"Congratulations! You bet €{stake}, and you won €{winnings}!" + Style.RESET_ALL)
                 self.total_wins += 1
             else:
-                print("Hard luck")
+                print(Fore.YELLOW + "Hard luck")
             
             self.balance += winnings
             self.balance -= stake
@@ -254,31 +254,31 @@ class RouletteGame:
             self.display_betting_history()
             self.display_winning_percentage()
 
-            play_again = input("Do you want to play again? (yes/no): \n")
+            play_again = input(Fore.YELLOW + "Do you want to play again? (yes/no): \n" + Style.RESET_ALL)
             if play_again.lower() != "yes":
                 break
     
     def display_betting_history(self):
         print("Betting history: \n")
         for bet in self.betting_history:
-            print(f"Bet: {bet['Bet']}, Stake: €{bet['Stake']}, Result: {bet['Win/Loss']}")
+            print(Fore.GREEN + f"Bet: {bet['Bet']}, Stake: €{bet['Stake']}, Result: {bet['Win/Loss']}" + Style.RESET_ALL)
         print()
 
     def display_winning_percentage(self):
         win_percentage = (self.total_wins / self.total_games) * 100
         formatted_win_percentage = format(win_percentage, ".1f")
         print(formatted_win_percentage)
-        print(f"Your win percentage is: {formatted_win_percentage}%")
+        print(Fore.GREEN + f"Your win percentage is: {formatted_win_percentage}%" + Style.RESET_ALL)
         print()
 
     def play(self):
         while True:
             self.play_game()
-            continue_playing = input("Do you want to leave the table? (yes/no): \n")
+            continue_playing = input(Fore.YELLOW + "Do you want to leave the table? (yes/no): \n" + Style.RESET_ALL)
             if continue_playing.lower() != "no":
                 break
 
-        print('Your closing balance is: €',self.balance)
+        print(Fore.YELLOW + 'Your closing balance is: €',self.balance)
     
 
 game = RouletteGame()
