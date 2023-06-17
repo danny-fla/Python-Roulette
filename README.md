@@ -28,6 +28,27 @@ This is a command-line Roulette game implemented in Python. The game simulates a
 
 The aim of this project is to create an interactive Roulette game that provides the user with an enjoyable and realisitic gaming experience. The game should accurately simulate a roulette wheel, allow users to place different types of bets and provide feedback on the outcomes and winings.
 
+# Installation and Setup:
+
+1. Python Installation:
+   - Ensure that you have Python 3.x installed on your system. If not, you can download and install Python from the official Python website (https://www.python.org).
+2. Required Dependencies:
+   - This Roulette game relies on the 'colorama' library for colored text output. You can install it using pip, the Python package installer.
+     Open a command prompt or terminal and execute the following command:
+     pip install colorama
+3. Download the Game Files:
+   - Download the Roulette Game source code from the repository on GitHub. You can clone the repository using Git or download it as a ZIP file and extract it to your desired location.
+4. Navigate to the Game Directory:
+   - Using the command prompt or terminal, navigate to the directory where you extracted the game files:
+     cd /path/to/roulette-game
+5. Run the Game:
+   - Once you are in the game directory, run the game by executing the following command:
+     python main.py
+6. Enjoy the Game:
+   - The Roulette Game should now start running, and you can start playing and placing your bets.
+
+Note: Make sure you have an active internet connection, as the game uses random number generation for the wheel spin.
+
 # How to play
 
 1. Run the "roulette_game.py" file in a Python environment.
