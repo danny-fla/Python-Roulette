@@ -156,7 +156,10 @@ class RouletteGame:
         # Function to get the list of 12 numbers for Dozen bet
         dozen_numbers_list = []
         while len(dozen_numbers_list) < 12:
-            dozen_number = input(Fore.YELLOW +'Enter a number (1-36) you wish to bet on ({} out of 12): \n'.format(len(dozen_numbers_list) + 1) + Style.RESET_ALL)
+            dozen_number = input(Fore.YELLOW +
+                                 'Enter a number to bet on ({} out of 12): \n'
+                                 .format(len(dozen_numbers_list) + 1)
+                                 + Style.RESET_ALL)
             if dozen_number.isdigit():
                 dozen_number = int(dozen_number)
                 if 1 <= dozen_number <= 36:
@@ -280,13 +283,13 @@ class RouletteGame:
     def play_game(self):
         """
         Starts an infinte loop to allow multiple game plays.
-        Controls the flow of the game by handling user inputs, spinning the roulette wheel, 
-        determining winnings, updating the balance, and displaying the betting history and 
-        winning percentage.
+        Controls the flow of the game by handling user inputs,
+        spinning the roulette wheel, determining winnings, updating the balance
+        and displaying the betting history and winning percentage.
         """
         while True:
-            self.total_games += 1 # keeps track of games played
-            choice = self.get_bet_choice() 
+            self.total_games += 1  # keeps track of games played
+            choice = self.get_bet_choice()
             stake = self.get_bet_amount(choice)
 
             winning_color, winning_number = self.spin_roulette_wheel()
@@ -318,21 +321,31 @@ class RouletteGame:
             self.display_betting_history()
             self.display_winning_percentage()
 
-            play_again = input(Fore.YELLOW +
-                               "Do you want to play again? (yes/no): \n"
-                               + Style.RESET_ALL)
-            if play_again.lower() != "yes":
-                break
+            while True:
+                play_again = input(Fore.YELLOW +
+                                   "Do you want to play again? (yes/no): "
+                                   + Style.RESET_ALL)
+                play_again = play_again.lower()
+
+                if play_again == "yes":
+                    break
+                elif play_again == "no":
+                    return
+                else:
+                    print(Fore.RED +
+                          "Invalid input. Please enter either 'yes' or 'no'."
+                          + Style.RESET_ALL)
 
     def display_betting_history(self):
         """
-        Displays the betting history to the user, showing the details 
+        Displays the betting history to the user, showing the details
         of each bet they have placed during the game.
         """
         print("Betting history: \n")
         for bet in self.betting_history:
             print(Fore.GREEN +
-                  f"Bet: {bet['Bet']}, Stake: €{bet['Stake']}, Result: {bet['Win/Loss']}"
+                  f"Bet: {bet['Bet']}, Stake: €{bet['Stake']}, "
+                  f"Result: {bet['Win/Loss']}"
                   + Style.RESET_ALL)
         print()
 
@@ -347,22 +360,36 @@ class RouletteGame:
 
     def play(self):
         """
-        Repeatedly calls the play_game method to play rounds of the roulette game until the player chooses to leave.
+        Repeatedly calls the play_game method to play rounds of the roulette
+        game until the player chooses to leave.
         It also displays the player's closing balance at the end of the game.
         """
         while True:
             self.play_game()
-            continue_playing = input(Fore.YELLOW +
-                                     "Do you want to leave? (yes/no): \n"
-                                     + Style.RESET_ALL)
-            if continue_playing.lower() != "no":
-                break
+            while True:
+                continue_playing = input(Fore.YELLOW +
+                                         "Do you want to leave? (yes/no): "
+                                         + Style.RESET_ALL)
+                continue_playing = continue_playing.lower()
 
-        print(Fore.YELLOW + 'Your closing balance is: €', self.balance)
+                if continue_playing == "yes":
+                    return
+                elif continue_playing == "no":
+                    break
+                else:
+                    print(Fore.RED +
+                          "Invalid input. Please enter either 'yes' or 'no'."
+                          + Style.RESET_ALL)
+
+        print(Fore.YELLOW + "Your closing balance is: €"
+              + str(self.balance)
+              + Style.RESET_ALL)
+
 
 """
 create an instance of the RouletteGame class and start the game,
-allowing the player to play rounds of the roulette game and interact with the game's features.
+allowing the player to play rounds of the roulette game and
+interact with the game's features.
 """
 game = RouletteGame()
 game.play()
