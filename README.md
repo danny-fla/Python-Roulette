@@ -1,6 +1,6 @@
 # Python Roulette
 
-This is a command-line Roulette game implemented in Python. The game simulates a roulette wheel and allows players to place bets on various outcomes, such as colours (Red or Black), odd or even numbers and specific numbers (Straight bets). Players can choose their desired bet type, place bet amount within range and spin the roulette wheel to determine the winning outcome. The game calculates the winnings based on the player's bet and displays the result.
+This is a command-line Roulette game implemented in Python. The game simulates a roulette wheel and allows players to place bets on various outcomes, such as colours (Red or Black), odd or even numbers, specific numbers (Straight bets) or Dozen (twelve numbers). Players can choose their desired bet type, place bet amount within range and spin the roulette wheel to determine the winning outcome. The game calculates the winnings based on the player's bet and displays the result.
 
 
 # Contents
@@ -16,13 +16,10 @@ This is a command-line Roulette game implemented in Python. The game simulates a
 - [Technologies Used](<#technologies-used>)
 - [Testing](<#testing>)
     - [Code Validation](<#code-validation>)
-    - [Lighthouse Testing](<#lighthouse-testing>)
-    - [Responsive Testing](<#responsive-testing>)
     - [Manual Testing](<#manual-testing>)
 - [Unresolved Bugs](<unresolved-bugs>)
 - [Deployment](<#deployment>)
 - [Disclaimer](<#disclaimer>)
-- [Credits](<#credits>)
 - [Acknowledgements](<#acknowledgements>)
 
 # Objective: 
@@ -44,7 +41,7 @@ The aim of this project is to create an interactive Roulette game that provides 
      cd /path/to/roulette-game
 5. Run the Game:
    - Once you are in the game directory, run the game by executing the following command:
-     python main.py
+     python3 run.py
 6. Enjoy the Game:
    - The Roulette Game should now start running, and you can start playing and placing your bets.
 
@@ -61,6 +58,7 @@ Note: Make sure you have an active internet connection, as the game uses random 
     - 4: Even
     - 5: Green
     - 6: Straight (requires entering a specific number from 1 to 36)
+    - 7: Dozen (requires a list of twelve numbers from 1 to 36)
 4. Enter the amount you wish to bet, within the range allowed.
 5. The roulette wheel will spin and the winning outcome will be displayed.
 6. If you win, your balance will be updated with your earnings, otherwise it will deduct the amount of the bet placed.
@@ -91,8 +89,7 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 ## User Interface:
 
-- The code utilizes the art library to generate ASCII art for the game's welcome message.
-- It also uses the colorama library to add color and style to the console output, enhancing the user experience.
+- Python Roulette uses the colorama library to add color and style to the console output, enhancing the user experience.
 
 ## Game Initialization:
 
@@ -101,7 +98,7 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 ## Choosing type of bet:
 
-- Asking players to choose their preferred bet type (Red, Black, Odd, Even, Green or Straight) improves their entertainment, offers customisation, provides strategic decision-making opportunities and adds variety to the gameplay experience.
+- Asking players to choose their preferred bet type (Red, Black, Odd, Even, Green, Straight and Dozen) improves their entertainment, offers customisation, provides strategic decision-making opportunities and adds variety to the gameplay experience.
 - It allows players to place their bets with their personalized choices, gameplan or gut instinct which makes the game more captivating and engaging.
 
 ## Bet allowances:
@@ -112,7 +109,7 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 ## Spinning roulette wheel:
 
-- Spinning the roulette wheel and finding out the winning outcomes provides excitment, spontanety, realisim and transparency for the user to enhances their engagment to the game.
+- Spinning the roulette wheel and finding out the winning outcomes provides excitment, spontanety, realisim and transparency for the user to enhance their engagment to the game.
 - It gives clear feedback, ensures fairness and is an entertaining prcoess in the gameplay.
 - This is an important part of the game as it add depth, excitement and originality to the roulette game experience.
 

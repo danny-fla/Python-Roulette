@@ -98,6 +98,7 @@ class RouletteGame:
             7: 'Dozen'
         }
 
+        # Display the available bet choices to the user
         print(Fore.MAGENTA + "Type '1' for Red.")
         print(Fore.MAGENTA + "Type '2' for Black.")
         print(Fore.MAGENTA + "Type '3' for Odd.")
@@ -133,6 +134,7 @@ class RouletteGame:
                       + Style.RESET_ALL)
 
     def get_straight_number(self):
+        # Function to get the specific number for a straught bet
         while True:
             straight_number = input(Fore.YELLOW +
                                     'Enter the number (1-36) to bet on: \n'
@@ -151,6 +153,7 @@ class RouletteGame:
                       + Style.RESET_ALL)
 
     def get_dozen_list(self):
+        # Function to get the list of 12 numbers for Dozen bet
         dozen_numbers_list = []
         while len(dozen_numbers_list) < 12:
             dozen_number = input(Fore.YELLOW +'Enter a number (1-36) you wish to bet on ({} out of 12): \n'.format(len(dozen_numbers_list) + 1) + Style.RESET_ALL)
@@ -226,8 +229,10 @@ class RouletteGame:
                 time.sleep(frame_duration)
 
     def spin_roulette_wheel(self):
-        # Function to generate the game's winning number and color
-        # Added a time delay to give the effect of a wheel spinning
+        """
+        Function to generate the game's winning number and color
+        Added a time delay to give the effect of a wheel spinning
+        """
         print(Fore.MAGENTA + "Roulette wheel spinning...")
         self.spin_animation()  # Add spinning animation before wheel spinning
         time.sleep(1)
@@ -245,8 +250,10 @@ class RouletteGame:
         return winning_color, winning_number
 
     def check_winnings(self, winning_color, winning_number, choice, stake):
-        # Funciton to check if the user has won any money
-        # Pays the winnings according to the bet odds
+        """
+        Funciton to check if the user has won any money.
+        Pays the winnings according to the bet odds.
+        """
         winnings = 0
         if winning_color == choice:
             if winning_color == 'Red' or winning_color == 'Black':
@@ -271,9 +278,15 @@ class RouletteGame:
         return winnings
 
     def play_game(self):
+        """
+        Starts an infinte loop to allow multiple game plays.
+        Controls the flow of the game by handling user inputs, spinning the roulette wheel, 
+        determining winnings, updating the balance, and displaying the betting history and 
+        winning percentage.
+        """
         while True:
-            self.total_games += 1
-            choice = self.get_bet_choice()
+            self.total_games += 1 # keeps track of games played
+            choice = self.get_bet_choice() 
             stake = self.get_bet_amount(choice)
 
             winning_color, winning_number = self.spin_roulette_wheel()
@@ -312,6 +325,10 @@ class RouletteGame:
                 break
 
     def display_betting_history(self):
+        """
+        Displays the betting history to the user, showing the details 
+        of each bet they have placed during the game.
+        """
         print("Betting history: \n")
         for bet in self.betting_history:
             print(Fore.GREEN +
@@ -320,6 +337,7 @@ class RouletteGame:
         print()
 
     def display_winning_percentage(self):
+        # Displays the user's winnings percentage at the end of each bet
         win_percentage = (self.total_wins / self.total_games) * 100
         formatted_win_percentage = format(win_percentage, ".1f")
         print(Fore.GREEN +
@@ -328,6 +346,10 @@ class RouletteGame:
         print()
 
     def play(self):
+        """
+        Repeatedly calls the play_game method to play rounds of the roulette game until the player chooses to leave.
+        It also displays the player's closing balance at the end of the game.
+        """
         while True:
             self.play_game()
             continue_playing = input(Fore.YELLOW +
@@ -338,6 +360,9 @@ class RouletteGame:
 
         print(Fore.YELLOW + 'Your closing balance is: €', self.balance)
 
-
+"""
+create an instance of the RouletteGame class and start the game,
+allowing the player to play rounds of the roulette game and interact with the game's features.
+"""
 game = RouletteGame()
 game.play()
