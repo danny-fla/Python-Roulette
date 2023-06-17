@@ -140,6 +140,7 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 - Python Roulette was created using Python 3.x
 - colorama library (install using pip install colorama)
+
 # Testing
 
 ## Code Validation
@@ -169,7 +170,6 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 | Repeat the steps to play another round | The game should allow for multiple rounds of gameplay | Multiple rounds of gameplay is possible |
 | Exhaust the account balance by repeatedly placing bets | Display a message indicating that the account balance is empty and prompt the user to add more money | Message is displayed, informing the user about the empty account balance and requesting to add more money |
 | Verify the user's final balance upon exiting th game | The user's final balance should be correctly updated and displayed | The user's final balance is correctly displayed |
-
 
 # Unresolved Bugs
 
