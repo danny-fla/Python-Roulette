@@ -6,6 +6,7 @@ This is a command-line Roulette game implemented in Python. The game simulates a
 # Contents
 
 - [Objective](<#Objective>)
+- [Installation and Setup](<#installation-and-setup>)
 - [How to play](<#How-to-play>)
 - [User Experience](<#user-experience-ux>)
      - [Site Aims](<#site-aims>)
@@ -24,7 +25,7 @@ This is a command-line Roulette game implemented in Python. The game simulates a
 - [Credits](<#credits>)
 - [Acknowledgements](<#acknowledgements>)
 
-# Objective
+# Objective: 
 
 The aim of this project is to create an interactive Roulette game that provides the user with an enjoyable and realisitic gaming experience. The game should accurately simulate a roulette wheel, allow users to place different types of bets and provide feedback on the outcomes and winings.
 
