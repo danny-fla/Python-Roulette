@@ -10,7 +10,13 @@ Original Slot Machine Game source code:
 """
 import random
 import time
+from art import *
 from colorama import Fore, Style
+
+print()
+print("Welcome to:")
+art_1 = text2art("Python Roulette")
+print(art_1)
 
 
 class RouletteGame:
