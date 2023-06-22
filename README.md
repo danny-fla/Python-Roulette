@@ -24,11 +24,11 @@ This is a command-line Roulette game implemented in Python. The game simulates a
 - [Disclaimer](<#disclaimer>)
 - [Acknowledgements](<#acknowledgements>)
 
-# Objective: 
+# Objective
 
 The aim of this project is to create an interactive Roulette game that provides the user with an enjoyable and realisitic gaming experience. The game should accurately simulate a roulette wheel, allow users to place different types of bets and provide feedback on the outcomes and winings.
 
-# Installation and Setup:
+# Installation and Setup
 
 1. Python Installation:
    - Ensure that you have Python 3.x installed on your system. If not, you can download and install Python from the official Python website (https://www.python.org).
@@ -80,58 +80,60 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 | 4  | User | As a player, I want to be able to play again or leave the table. | To allow for convenience and accessibility. |
 | 5  | User | As a player, I want my account balance to be updated based on the outcome and winnings of each bet. | To allow for financial management. It provides essential information for decision-making, strategy development, and goal setting. |
 
-## Flowchart:
+## Flowchart
 
 ![Flowchart](images/flowchart.png)
 
 # Features
 
-## RouletteGame class:
+## RouletteGame class
 
 - The code defines a RouletteGame class that encapsulates the game logic and data. 
 - It handles user interactions, manages the game state, and tracks the user's balance, betting history, and win statistics,
 
-## User Interface:
+## User Interface
 
 - Python Roulette uses the colorama library to add color and style to the console output, enhancing the user experience.
 
-## Game Initialization:
+## Game Initialization
 
 - Upon starting the game, the user is prompted to add money to their account by specifying the deposit amount.
 - The entered amount is validated, and the balance is updated accordingly.
 
-## Choosing type of bet:
+## Choosing type of bet
 
 - Asking players to choose their preferred bet type (Red, Black, Odd, Even, Green, Straight and Dozen) improves their entertainment, offers customisation, provides strategic decision-making opportunities and adds variety to the gameplay experience.
 - It allows players to place their bets with their personalized choices, gameplan or gut instinct which makes the game more captivating and engaging.
 
-## Bet allowances:
+## Bet allowances
 
 - To promote fairness, financial planning and sensible gambling the game asks players to bet within the game's allowence.
 - This ensures players' can allow for more decision-making, encourages risk manangement and adds to the game's balance.
 - These boundaries creates a regulated environment for the player to safely enjoy the roulette experience.
 
-## Spinning roulette wheel:
+## Spinning roulette wheel
 
 - Spinning the roulette wheel and finding out the winning outcomes provides excitment, spontanety, realisim and transparency for the user to enhance their engagment to the game.
 - It gives clear feedback, ensures fairness and is an entertaining prcoess in the gameplay.
 - This is an important part of the game as it add depth, excitement and originality to the roulette game experience.
 
-## Winning calculations:
+## Winning calculations
 
 - Calculating and displaying winnings based on the bet and outcome of the roulette wheel spin gives the user feedback, provides them a reward and facilitates financial management.
 - It gives the user a sense of satisfation and meaningness which further contributes to the game's enjoyability.
 
-## Betting history tracking:
+## Betting history tracking
 
 - After the end of each spin of the wheel the user's bet and stake along with the outcome of the bet is displayed to the user.
 - This provides the user with a comprehensive overview of their betting activity throughout the game.
 
-## Update account balance:
+## Update account balance
+
 - This is crucial for allowing the user to make in-game decision, offers financial management and provides the user with fulfiment when they are successful. 
 - They can then use this information to make informed choices based on their earnings or losses.
 
-## Play again or leave table:
+## Play again or leave table
+
 - By providing the option to play again or leave the table gives the user flexibility in making their decisions based on their convience, time and financial management.
 - This makes sure that Python Roulette's appraoch is user-centered and offers a authentic experience to each player of the game.
 
@@ -159,16 +161,21 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 - play: Starts the game and allows the user to play multiple rounds.
 
 
-# Dependencies:
+# Dependencies
 
 - Python Roulette was created using Python 3.x
 - colorama library (install using pip install colorama)
+- art library (install using pip install art)
 
 # Testing
 
-## Code Validation:
+## Code Validation
 
-## Manual Testing:
+Python Roulette was tested throughout its creating using Code Institute's [Python Linter](https://pep8ci.herokuapp.com/)
+
+![Code Validation](images/python-validator.png)
+
+## Manual Testing
 
 
 | Action        | Expected           | Actual  |
@@ -197,7 +204,8 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 This program is a gambling simulation and does not involve real money. It is intended for education and entertainment purposes only.
 
-# Acknowledgements:
+# Acknowledgements
+
 - The Roulette Game was inspired by the Slot Machine Game developed by [techwithtim].
 - The structure and logic of the Slot Machine Game served as a reference and provided inspiration for the development of this Roulette Game.
 - Original Slot Machine Game source code: [https://github.com/techwithtim/Python-Slot-Machine/blob/main/main.py]
