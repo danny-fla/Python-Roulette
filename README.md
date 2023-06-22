@@ -12,10 +12,12 @@ This is a command-line Roulette game implemented in Python. The game simulates a
 - [How to play](<#How-to-play>)
 - [User Experience](<#user-experience-ux>)
      - [Site Aims](<#site-aims>)
-     - [Flowchart](<#flow-chart>)
+     - [Flowchart](<#flowchart>)
 - [Features](<#features>)
 - [Future Features](<#future-features>)
+- [Code Structure](<#code-structure>)
 - [Technologies Used](<#technologies-used>)
+- [Dependencies](<#dependencies>)
 - [Testing](<#testing>)
     - [Code Validation](<#code-validation>)
     - [Manual Testing](<#manual-testing>)
@@ -160,6 +162,25 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 - display_winning_percentage: Displays the user's win percentage.
 - play: Starts the game and allows the user to play multiple rounds.
 
+# Technologies Used
+
+Python Roulette utilizes the following technologies:
+
+Python: The application is built using the Python programming language. Python provides a versatile and powerful environment for developing interactive and dynamic applications.
+
+Colorama: Colorama is a Python library used for adding color and style to the text output in the terminal. It enhances the visual appearance of the game by allowing the use of different colors and formatting options.
+
+Art: Art is a Python library used for generating ASCII art. It enables the creation of visually appealing text-based graphics and adds an aesthetic touch to the game's visual elements.
+
+Heroku: Heroku is a cloud platform that is used for deploying and hosting the Python Roulette application. It provides a reliable and scalable infrastructure for running web applications.
+
+Git: Git is a distributed version control system used for managing and tracking changes to the source code. It allows for collaborative development and ensures the project's history and revisions are properly maintained.
+
+GitHub: GitHub is a web-based platform for hosting and sharing Git repositories. It provides a convenient way to store and manage the project's source code, as well as facilitating collaboration and version control.
+
+Code Institute Backend Template: Code Institute provides a backend template designed to display the Python Roulette application in a modern web browser. This template enables easy accessibility for users without the need for additional software other than a web browser.
+
+These technologies work together to create an engaging and interactive gaming experience in Python Roulette.
 
 # Dependencies
 
