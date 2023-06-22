@@ -17,7 +17,7 @@ print()
 print(Fore.YELLOW +
       "Welcome to:"
       + Style.RESET_ALL)
-      
+
 art_1 = text2art("Python")
 art_2 = text2art("Roulette")
 print(art_1)
@@ -369,7 +369,6 @@ class RouletteGame:
               + Style.RESET_ALL)
         print()
 
-
     def play(self):
         """
         Repeatedly calls the play_game method to play rounds of the roulette
@@ -377,14 +376,14 @@ class RouletteGame:
         It also displays the player's closing balance at the end of the game.
         """
         continue_playing = "no"  # Initialize the variable before the loop
-        
+
         while continue_playing != "yes":
             self.play_game()
-            
+
             while True:
                 continue_playing = input(Fore.YELLOW +
-                                        "Do you want to leave? (yes/no): "
-                                        + Style.RESET_ALL)
+                                         "Do you want to leave? (yes/no): "
+                                         + Style.RESET_ALL)
                 continue_playing = continue_playing.lower()
 
                 if continue_playing == "yes":
@@ -393,12 +392,12 @@ class RouletteGame:
                     break
                 else:
                     print(Fore.RED +
-                        "Invalid input. Please enter either 'yes' or 'no'."
-                        + Style.RESET_ALL)
+                          "Invalid input. Please enter either 'yes' or 'no'."
+                          + Style.RESET_ALL)
 
-        print(Fore.YELLOW + "Your closing balance is: €" + str(self.balance) + Style.RESET_ALL)
-
-
+        print(Fore.YELLOW + "Your closing balance is: €" +
+              str(self.balance)
+              + Style.RESET_ALL)
 
 
 """

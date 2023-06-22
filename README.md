@@ -1,5 +1,7 @@
 # Python Roulette
 
+![Welcome Page](images/welcome-page.png)
+
 This is a command-line Roulette game implemented in Python. The game simulates a roulette wheel and allows players to place bets on various outcomes, such as colours (Red or Black), odd or even numbers, specific numbers (Straight bets) or Dozen (twelve numbers). Players can choose their desired bet type, place bet amount within range and spin the roulette wheel to determine the winning outcome. The game calculates the winnings based on the player's bet and displays the result.
 
 
@@ -78,7 +80,9 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 | 4  | User | As a player, I want to be able to play again or leave the table. | To allow for convenience and accessibility. |
 | 5  | User | As a player, I want my account balance to be updated based on the outcome and winnings of each bet. | To allow for financial management. It provides essential information for decision-making, strategy development, and goal setting. |
 
-## Flowchart
+## Flowchart:
+
+![Flowchart](images/flowchart.png)
 
 # Features
 
@@ -162,14 +166,9 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 # Testing
 
-## Code Validation
+## Code Validation:
 
-## Lighthouse Testing
-
-
-## Responsive Testing
-
-## Manual Testing
+## Manual Testing:
 
 
 | Action        | Expected           | Actual  |
