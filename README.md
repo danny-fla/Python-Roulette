@@ -163,15 +163,34 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 # Dependencies
 
-- Python Roulette was created using Python 3.x
-- colorama library (install using pip install colorama)
-- art library (install using pip install art)
+Ensure that all the dependencies are installed correctly before running the Python Roulette application to avoid any potential issues or errors.
+
+Python Roulette relies on the following dependencies:
+
+- Python 3.x: The application was created using Python 3.x version. Ensure that you have Python 3.x installed on your system before running the program.
+
+- colorama library: This library is used to add color and style to the text output in the terminal. To install colorama, open a terminal or command prompt and run the following command:
+
+pip install colorama
+
+This will install the colorama library and make it available for the Python Roulette application to use.
+
+- art library: The art library is utilized to generate ASCII art for visual elements in the game. To install the art library, open a terminal or command prompt and run the following command:
+
+pip install art
+
+This will install the art library and enable Python Roulette to generate visually appealing ASCII art.
+
 
 # Testing
 
 ## Code Validation
 
-Python Roulette was tested throughout its creating using Code Institute's [Python Linter](https://pep8ci.herokuapp.com/)
+Python Roulette was thoroughly tested during its development using Code Institute's Python Linter, which helps ensure adherence to the Python code style guidelines.
+
+Throughout the testing process, the linter reported various issues such as "trailing whitespaces," "under-indented lines," and "too many blank lines." These issues were promptly addressed and resolved, resulting in clean and well-formatted code.
+
+By utilizing the Python Linter, the project's code was reviewed and validated to meet the recommended coding standards, enhancing code readability, maintainability, and overall quality.
 
 ![Code Validation](images/python-validator.png)
 
@@ -197,6 +216,8 @@ Python Roulette was tested throughout its creating using Code Institute's [Pytho
 | Verify the user's final balance upon exiting th game | The user's final balance should be correctly updated and displayed | The user's final balance is correctly displayed |
 
 # Unresolved Bugs
+
+There has been no bugs reported.
 
 # Deployment 
 
