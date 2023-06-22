@@ -35,7 +35,7 @@ The aim of this project is to create an interactive Roulette game that provides 
 1. Python Installation:
    - Ensure that you have Python 3.x installed on your system. If not, you can download and install Python from the official Python website (https://www.python.org).
 2. Required Dependencies:
-   - This Roulette game relies on the 'colorama' library for colored text output. You can install it using pip, the Python package installer.
+   - This Roulette game relies on the 'colorama' library for coloured text output. You can install it using pip, the Python package installer.
      Open a command prompt or terminal and execute the following command:
      pip install colorama
 3. Download the Game Files:
@@ -105,57 +105,57 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 ## Choosing type of bet
 
 - Asking players to choose their preferred bet type (Red, Black, Odd, Even, Green, Straight and Dozen) improves their entertainment, offers customisation, provides strategic decision-making opportunities and adds variety to the gameplay experience.
-- It allows players to place their bets with their personalized choices, gameplan or gut instinct which makes the game more captivating and engaging.
+- It allows players to place their bets with their personalised choices, gameplan or gut instinct which makes the game more captivating and engaging.
 
 ## Bet allowances
 
-- To promote fairness, financial planning and sensible gambling the game asks players to bet within the game's allowence.
-- This ensures players' can allow for more decision-making, encourages risk manangement and adds to the game's balance.
+- To promote fairness, financial planning and sensible gambling the game asks players to bet within the game's allowance.
+- This ensures players can allow for more decision-making, encourages risk manangement and adds to the game's balance.
 - These boundaries creates a regulated environment for the player to safely enjoy the roulette experience.
 
 ## Spinning roulette wheel
 
-- Spinning the roulette wheel and finding out the winning outcomes provides excitment, spontanety, realisim and transparency for the user to enhance their engagment to the game.
-- It gives clear feedback, ensures fairness and is an entertaining prcoess in the gameplay.
-- This is an important part of the game as it add depth, excitement and originality to the roulette game experience.
+- Spinning the roulette wheel and finding out the winning outcomes provides excitment, spontanety, realisim and transparency for the user to enhance their engagment with the game.
+- It gives clear feedback, ensures fairness and is an entertaining process in the gameplay.
+- This is an important part of the game as it adds depth, excitement and originality to the roulette game experience.
 
 ## Winning calculations
 
-- Calculating and displaying winnings based on the bet and outcome of the roulette wheel spin gives the user feedback, provides them a reward and facilitates financial management.
-- It gives the user a sense of satisfation and meaningness which further contributes to the game's enjoyability.
+- Calculating and displaying winnings based on the bet and outcome of the roulette wheel spin gives the user feedback, provides them with a reward and facilitates financial management.
+- It gives the user a sense of satisfation and purpose which further contributes to the game's enjoyability.
 
 ## Betting history tracking
 
-- After the end of each spin of the wheel the user's bet and stake along with the outcome of the bet is displayed to the user.
+- At the end of each spin of the wheel the user's bet and stake along with the outcome of the bet is displayed to the user.
 - This provides the user with a comprehensive overview of their betting activity throughout the game.
 
 ## Update account balance
 
-- This is crucial for allowing the user to make in-game decision, offers financial management and provides the user with fulfiment when they are successful. 
-- They can then use this information to make informed choices based on their earnings or losses.
+- This is crucial in order to allow the user to make in-game decisions, offers financial management and provides the user with fulfillment when they are successful. 
+- They can then use this information to make informed choices based on their winnings and/or losses.
 
 ## Play again or leave table
 
-- By providing the option to play again or leave the table gives the user flexibility in making their decisions based on their convience, time and financial management.
-- This makes sure that Python Roulette's appraoch is user-centered and offers a authentic experience to each player of the game.
+- The option to play again or leave the table allows the user flexibility in making their decisions based on their convenience, time and financial management.
+- This makes sure that Python Roulette's approach is user-centered and offers a authentic experience to each player of the game.
 
 # Future Features
 
 - Implement different betting strategies for a more advanced gameplay.
-- Add support for multiple players to join and allowing them to compete together.
+- Add support for multiple players to join and allow them to compete together.
 - Include additional statistics and analysis of gameplay, such as win/loss ratio, winning streaks and other relevant data.
 - Different roulette variations: Include support for different variations of roulette, such as European, American, or French roulette.
 
 # Code Structure
 - roulette_game.py: Main file containing the RouletteGame class and the game logic.
-- __init__: Initializes the game object and sets the initial balance and betting history.
+- __init__: Initialises the game object and sets the initial balance and betting history.
 - add_money: Prompts the user to add money to their game account.
 - get_bet_choice: Prompts the user to choose a bet type.
 - get_straight_number: Prompts the user to enter a specific number for a straight bet.
 - get_dozen_list: Prompts the user to enter 12 numbers for a dozen bet.
 - get_bet_amount: Prompts the user to enter the bet amount.
 - spin_animation: Displays a spinning animation before and after spinning the roulette wheel.
-- spin_roulette_wheel: Simulates the spinning of the roulette wheel and returns the winning number and color.
+- spin_roulette_wheel: Simulates the spinning of the roulette wheel and returns the winning number and colour.
 - check_winnings: Checks if the user has won any money based on the bet and the wheel outcome.
 - play_game: Main game loop that handles the entire gameplay process.
 - display_betting_history: Displays the user's betting history.
@@ -164,11 +164,11 @@ The primary aim of Python Roulette is to enterain users by offering a realisitic
 
 # Technologies Used
 
-Python Roulette utilizes the following technologies:
+Python Roulette utilises the following technologies:
 
 Python: The application is built using the Python programming language. Python provides a versatile and powerful environment for developing interactive and dynamic applications.
 
-Colorama: Colorama is a Python library used for adding color and style to the text output in the terminal. It enhances the visual appearance of the game by allowing the use of different colors and formatting options.
+Colorama: Colorama is a Python library used for adding colour and style to the text output in the terminal. It enhances the visual appearance of the game by allowing the use of different colours and formatting options.
 
 Art: Art is a Python library used for generating ASCII art. It enables the creation of visually appealing text-based graphics and adds an aesthetic touch to the game's visual elements.
 
@@ -190,13 +190,13 @@ Python Roulette relies on the following dependencies:
 
 - Python 3.x: The application was created using Python 3.x version. Ensure that you have Python 3.x installed on your system before running the program.
 
-- colorama library: This library is used to add color and style to the text output in the terminal. To install colorama, open a terminal or command prompt and run the following command:
+- colorama library: This library is used to add colour and style to the text output in the terminal. To install colorama, open a terminal or command prompt and run the following command:
 
 pip install colorama
 
 This will install the colorama library and make it available for the Python Roulette application to use.
 
-- art library: The art library is utilized to generate ASCII art for visual elements in the game. To install the art library, open a terminal or command prompt and run the following command:
+- art library: The art library is utilised to generate ASCII art for visual elements in the game. To install the art library, open a terminal or command prompt and run the following command:
 
 pip install art
 
@@ -209,9 +209,9 @@ This will install the art library and enable Python Roulette to generate visuall
 
 Python Roulette was thoroughly tested during its development using Code Institute's Python Linter, which helps ensure adherence to the Python code style guidelines.
 
-Throughout the testing process, the linter reported various issues such as "trailing whitespaces," "under-indented lines," and "too many blank lines." These issues were promptly addressed and resolved, resulting in clean and well-formatted code.
+Throughout the testing process, the linter reported various issues such as "trailing whitespaces," "under-indented lines," and "too many blank lines". These issues were promptly addressed and resolved, resulting in clean and well-formatted code.
 
-By utilizing the Python Linter, the project's code was reviewed and validated to meet the recommended coding standards, enhancing code readability, maintainability, and overall quality.
+By utilising the Python Linter, the project's code was reviewed and validated to meet the recommended coding standards, enhancing code readability, maintainability, and overall quality.
 
 ![Code Validation](images/python-validator.png)
 
@@ -222,19 +222,19 @@ By utilizing the Python Linter, the project's code was reviewed and validated to
 | ------------- |:-------------:| -----:|
 | Deposit money into the account | The account balance should update accordingly | Account balance is correctly updated |
 | Deposit -€10 into the account | Display an error message stating that the deposit amount must be positive | Error message is displayed, preventing a negative deposit |
-| Chose a bet type (e.g. Red, Odd) | The chosen bet type should be registered| Bet type is correctly registered |
-| Chose a bet type by entering invalid type (e.g. letter, 7) | Display an error message indicating that an invalid bet choice was entered | Error message is displayed, informing the user about the invalid bet choice |
+| Choose a bet type (e.g. Red, Odd) | The chosen bet type should be registered| Bet type is correctly registered |
+| Choose a bet type by entering invalid type (e.g. letter, 7) | Display an error message indicating that an invalid bet choice was entered | Error message is displayed, informing the user about the invalid bet choice |
 | Choose a straight bet and enter a number outside the range of 1-36 (e.g., 50) | Display an error message stating that the straight bet number is invalid | Error message is displayed, informing the user that the entered number is outside the valid range |
 | Enter a valid bet amount within the allowed range | The bet amount should be accepted | The bet amount is accepted |
 | Enter a bet amount of €1000 when the account balance is €500 | Display an error message indicating that the bet amount exceeds the account balance | Error message is displayed, informing the user that the bet amount is higher than the account balance |
 | Spin the roulette wheel | The wheel should spin and land on random number and colour | The roulette wheel spins and successfully lands on a random number and colour |
 | Check the bet outcome | Based on the outcome of the spin the game should determine if the bet is correct or incorrect | Outcome of the bet is correctly determined |
-| Display winnings if bet is successful | If the bet wins the winnings should be displayed to user | Winnings are correctly displayed |
+| Display winnings if bet is successful | If the bet wins the winnings should be displayed to the user | Winnings are correctly displayed |
 | Track and display betting history | The type of bet, user's stake and whether they won or lost should be displayed at the end of each spin | Betting history is correctly displayed |
-| Option to play again or leave table is prompted |The player should have the option to quit the game of continue playing | The option to play or leave is correctly provided |
+| Option to play again or leave table is prompted |The player should have the option to quit the game or continue playing | The option to play or leave is correctly provided |
 | Repeat the steps to play another round | The game should allow for multiple rounds of gameplay | Multiple rounds of gameplay is possible |
 | Exhaust the account balance by repeatedly placing bets | Display a message indicating that the account balance is empty and prompt the user to add more money | Message is displayed, informing the user about the empty account balance and requesting to add more money |
-| Verify the user's final balance upon exiting th game | The user's final balance should be correctly updated and displayed | The user's final balance is correctly displayed |
+| Verify the user's final balance upon exiting the game | The user's final balance should be correctly updated and displayed | The user's final balance is correctly displayed |
 
 # Unresolved Bugs
 
@@ -242,7 +242,7 @@ There has been no bugs reported.
 
 # Deployment 
 
-This application has been deployed using the Heroku cloud platfomr. Follow the steps below to replicate te deployment process:
+This application has been deployed using the Heroku cloud platform. Follow the steps below to replicate the deployment process:
 
 Local Deployment:
 
@@ -261,10 +261,10 @@ Heroku Deployment:
 8. To add support for dependencies, click on "Add Buildpack".
 9. Add Python as the first dependency, followed by Node.js.
 10. Select "Manual Deployment" to manually deploy from your branch.
-Althernatively, you can select "Enable Automatic Deploy" to automatically project your project when you push a new commit.
+Alternatively, you can select "Enable Automatic Deploy" to automatically project your project when you push a new commit.
 11. After completing the above steps, your Heroku app will need two files for successful deployment: requirements.txt and Procfile.
 12. Install the project's requirements by running the following command:
-   pip insttall -r requirments.txt
+   pip install -r requirments.txt
 
 By following these steps, you can deploy the Python Roulette application on Heroku and make it accessible to users.
 
