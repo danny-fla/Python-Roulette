@@ -14,7 +14,10 @@ from art import *
 from colorama import Fore, Style
 
 print()
-print("Welcome to:")
+print(Fore.YELLOW +
+      "Welcome to:"
+      + Style.RESET_ALL)
+      
 art_1 = text2art("Python")
 art_2 = text2art("Roulette")
 print(art_1)
