@@ -242,6 +242,32 @@ There has been no bugs reported.
 
 # Deployment 
 
+This application has been deployed using the Heroku cloud platfomr. Follow the steps below to replicate te deployment process:
+
+Local Deployment:
+
+Clone the repository by running the following command in your intergrated development environment (IDE):
+
+Heroku Deployment:
+
+1. Create an account on Heroku [https://www.heroku.com/] if you haven't already done so.
+2. Log in to your Heroku Dashboard and click on "New".
+3. Select "Create new app" from the dropdown menu and give the application a unique name.
+4. Choose the region closest to you.
+5. Click "Create App" to create your application.
+6. In your newly created application's settings, click on "Reveal Config Vars".
+7. Add the config var:
+   KEY: PORT, VALUE: 8000
+8. To add support for dependencies, click on "Add Buildpack".
+9. Add Python as the first dependency, followed by Node.js.
+10. Select "Manual Deployment" to manually deploy from your branch.
+Althernatively, you can select "Enable Automatic Deploy" to automatically project your project when you push a new commit.
+11. After completing the above steps, your Heroku app will need two files for successful deployment: requirements.txt and Procfile.
+12. Install the project's requirements by running the following command:
+   pip insttall -r requirments.txt
+
+By following these steps, you can deploy the Python Roulette application on Heroku and make it accessible to users.
+
 # Disclaimer
 
 This program is a gambling simulation and does not involve real money. It is intended for education and entertainment purposes only.
