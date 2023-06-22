@@ -15,7 +15,7 @@ from colorama import Fore, Style
 
 print()
 print("Welcome to:")
-art_1 = text2art("Python Roulette")
+art_1 = text2art("Roulette")
 print(art_1)
 
 
