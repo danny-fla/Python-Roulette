@@ -235,6 +235,8 @@ By utilising the Python Linter, the project's code was reviewed and validated to
 | Repeat the steps to play another round | The game should allow for multiple rounds of gameplay | Multiple rounds of gameplay is possible |
 | Exhaust the account balance by repeatedly placing bets | Display a message indicating that the account balance is empty and prompt the user to add more money | Message is displayed, informing the user about the empty account balance and requesting to add more money |
 | Verify the user's final balance upon exiting the game | The user's final balance should be correctly updated and displayed | The user's final balance is correctly displayed |
+| Test various invalid inputs | Enter invalid inputs in various fields | The game correctly handles invalid inputs |
+
 
 # Unresolved Bugs
 
