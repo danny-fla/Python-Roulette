@@ -4,6 +4,8 @@
 
 This is a command-line Roulette game implemented in Python. The game simulates a roulette wheel and allows players to place bets on various outcomes, such as colours (Red or Black), odd or even numbers, specific numbers (Straight bets) or Dozen (twelve numbers). Players can choose their desired bet type, place bet amount within range and spin the roulette wheel to determine the winning outcome. The game calculates the winnings based on the player's bet and displays the result.
 
+Follow this link to the live site [Python Roulette](https://roulette-python-e6aefa000cea.herokuapp.com/)
+
 
 # Contents
 
@@ -276,9 +278,9 @@ This program is a gambling simulation and does not involve real money. It is int
 
 # Acknowledgements
 
-- The Roulette Game was inspired by the Slot Machine Game developed by [techwithtim].
+- The Roulette Game was inspired by the Slot Machine Game developed by techwithtim.
 - The structure and logic of the Slot Machine Game served as a reference and provided inspiration for the development of this Roulette Game.
-- Original Slot Machine Game source code: [https://github.com/techwithtim/Python-Slot-Machine/blob/main/main.py]
+- Original Slot Machine Game source code: [techwithtim](https://github.com/techwithtim/Python-Slot-Machine/blob/main/main.py)
 - I want to thank my mentor, Code Institute's Mentor Assistance and all the members of the Slack community for their support and guidance throughout the creation of this project.
 
 
